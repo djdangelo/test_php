@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  php:
+    build:
+      context: ./docker/php
+    container_name: php_app
+    volumes:
+      - .:/var/www/html
+    working_dir: /var/www/html
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:5.7
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: prueba_tecnica
+      MYSQL_USER: dangelo-aguilar
+      MYSQL_PASSWORD: bjadbeuygasjhuiheIUG7676567
+    ports:
+      - "3306:3306"
