@@ -36,8 +36,7 @@
         {
             return $this->createdAt;
         }
-    
-        // Método para convertir el DTO a un array (útil para JSON)
+
         public function toArray(): array
         {
             return [

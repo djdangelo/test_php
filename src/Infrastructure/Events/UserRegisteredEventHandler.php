@@ -1,5 +1,5 @@
 <?php
-namespace App\Infrastructure\EventHandler;
+namespace App\Infrastructure\Events;
 
 use App\Domain\User\Event\UserRegisteredEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
